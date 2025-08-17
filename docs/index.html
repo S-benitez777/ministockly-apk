@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MiniStockly</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/icon (1).png" type="image/png">
+<link rel="icon" href="icons/icon(1).png" type="image/png">
 <meta name="theme-color" content="#0ea5e9">
 </head>
 <body>
   <h1>🚀 Bienvenido a MiniStockly</h1>
   <p>Tu app PWA está lista para usarse offline ✨</p>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log("Service Worker registrado ✅"))
-        .catch(err => console.error("Error registrando Service Worker:", err));
-    }
+ if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("✅ SW registrado"))
+        .catch(err => console.error("❌ Error registrando SW:", err));
+    });
+  }
   </script>
 </body>
 </html>
