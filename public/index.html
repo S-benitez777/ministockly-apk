@@ -2,50 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Stockly API – Inventario</title>
-  <link rel="stylesheet" href="style.css">
-
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0ea5e9">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniStockly</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <div class="container">
-    <h1>Gestión de Productos – miniStockly</h1>
-
-    <form id="form-producto">
-      <input type="hidden" id="producto-id">
-      <input type="text" id="nombre" placeholder="Nombre" required>
-      <input type="number" id="cantidad" placeholder="Cantidad" required>
-      <input type="number" step="0.01" id="precio" placeholder="Precio" required>
-      <button type="submit">Guardar</button>
-    </form>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="tabla-productos">
-        <!-- Productos aparecerán aquí -->
-      </tbody>
-    </table>
-  </div>
-
-  <script src="app.js"></script>
-
-<script>
-// Registro de Service Worker para PWA
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(() => console.log('[SW] Registrado'))
-      .catch(err => console.error('[SW] Error:', err));
-  });
-}
-</script>
+  <h1>🚀 Bienvenido a MiniStockly</h1>
+  <p>Tu app PWA está lista para usarse offline ✨</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("Service Worker registrado ✅"))
+        .catch(err => console.error("Error registrando Service Worker:", err));
+    }
+  </script>
 </body>
 </html>

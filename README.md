@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # MiniStockly → PWA → APK (sin Android Studio para programar)
 
@@ -55,3 +56,6 @@ adb install android/app/build/outputs/apk/debug/app-debug.apk
 - El service worker ya usa caché para shell + fallback offline.
 - Versiona el caché si cambias archivos (ministockly-v2, v3…).
 - Prueba Lighthouse (Chrome) para PWA y performance.
+=======
+"# ministockly-apk" 
+>>>>>>> 9c84c12ea93887689fdf7f9e5ac56cd352f62330
