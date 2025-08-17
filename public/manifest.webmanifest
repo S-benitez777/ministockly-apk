@@ -9,12 +9,32 @@
   "theme_color": "#4CAF50",
   "lang": "es",
   "dir": "ltr",
+  "id": "/?source=pwa",
+  "orientation": "portrait-primary",
+    "launch_handler": {
+    "client_mode": "navigate-existing", 
+    
+  "screenshots": [
+  {
+    "src": "screenshots/screenshot1.png",
+    "sizes": "1087x416",
+    "type": "image/png"
+  },
+  {
+    "src": "screenshots/screenshot2.png",
+    "sizes": "1105x367",
+    "type": "image/png"
+  }
+],
+
+
+  
   "icons": [
     {
-      "src": "icons/icon(1).png",
+      "src": "icons/icon-any.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "icons/icon(3).png",
@@ -31,7 +51,7 @@
       "src": "icons/maskable-icon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }

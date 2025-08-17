@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
         './',
         './index.html',
         './manifest.webmanifest',
-        './icons/icon (1).png',
+        './icons/icon-any.png',
         './icons/maskable.icon.png'
       ]);
     })
@@ -24,11 +24,6 @@ self.addEventListener('fetch', (event) => {
             cache.put(event.request, responseClone);
           });
         }
-        return response;
-      })
-      .catch((error) => {
-        // If network request fails, try to get from cache
-        console.log('Network request failed, falling back to cache:', error);
         return response;
       })
       .catch(async (error) => {

@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
         './',
         './index.html',
         './manifest.webmanifest',
-        './icons/icon(1).png',
+        './icons/icon-any.png',
         './icons/maskable.icon.png'
       ]);
     })

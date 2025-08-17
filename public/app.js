@@ -5,7 +5,10 @@ const tabla = document.getElementById("tabla-productos");
 
 function cargarProductos() {
   fetch(`${API}read.php`)
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("Error al obtener productos");
+      return res.json();
+    })
     .then(data => {
       tabla.innerHTML = "";
       if (Array.isArray(data)) {
@@ -25,6 +28,9 @@ function cargarProductos() {
       } else {
         tabla.innerHTML = `<tr><td colspan="4">${data.mensaje || "No hay productos"}</td></tr>`;
       }
+    })
+    .catch(error => {
+      tabla.innerHTML = `<tr><td colspan="4">Error: ${error.message}</td></tr>`;
     });
 }
 
